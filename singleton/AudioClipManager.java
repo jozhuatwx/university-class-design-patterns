@@ -1,12 +1,15 @@
-package lab2;
+package singleton;
 
 public class AudioClipManager {
+  // create an object of AudioClipManager
   private static AudioClipManager instance = new AudioClipManager();
   // previously requested audio clip
   private AudioClip prevClip;
 
+  // make the constructor private so that this class cannot be instantiated
   private AudioClipManager() {}
 
+  // get the only available object
   public static AudioClipManager getInstance() {
     return instance;
   }
